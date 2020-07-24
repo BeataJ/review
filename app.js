@@ -47,3 +47,15 @@ const info = document.getElementById('info');
 const prevBtn = document.querySelector('prev-btn');
 const nextBtn = document.querySelector('next-btn');
 const randomBtn = document.querySelector('random-btn');
+
+// set starting item
+let currrentItem = 0;
+
+// load intial item
+window.addEventListener('DOMContentLoaded', () => {
+  const item = reviews[currrentItem];
+  img.src = item.img;
+  author.innerText = item.name;
+  job.innerText = item.job;
+  info.innerText = item.text;
+});
