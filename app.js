@@ -56,6 +56,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const item = reviews[currrentItem];
   img.src = item.img;
   author.innerText = item.name;
-  job.innerText = item.job;
-  info.innerText = item.text;
+  job.textContent = item.job;
+  info.textContent = item.text;
 });
