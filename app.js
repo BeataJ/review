@@ -72,3 +72,11 @@ nextBtn.addEventListener('click', () => {
   }
   showPerson(currrentItem);
 });
+
+prevBtn.addEventListener('click', () => {
+  currrentItem--;
+  if (currrentItem < 0) {
+    currrentItem = reviews.length - 1;
+  }
+  showPerson(currrentItem);
+});
