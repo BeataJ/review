@@ -44,9 +44,9 @@ const author = document.getElementById('author');
 const job = document.getElementById('job');
 const info = document.getElementById('info');
 
-const prevBtn = document.querySelector('prev-btn');
-const nextBtn = document.querySelector('next-btn');
-const randomBtn = document.querySelector('random-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const randomBtn = document.querySelector('.random-btn');
 
 // set starting item
 let currrentItem = 0;
@@ -56,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showPerson(currrentItem);
 });
 
+// show person based on item
 function showPerson(person) {
   const item = reviews[person];
   img.src = item.img;
@@ -63,3 +64,11 @@ function showPerson(person) {
   job.textContent = item.job;
   info.textContent = item.text;
 }
+
+nextBtn.addEventListener('click', () => {
+  currrentItem++;
+  if (currrentItem > reviews.length - 1) {
+    currrentItem = 0;
+  }
+  showPerson(currrentItem);
+});
