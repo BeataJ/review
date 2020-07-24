@@ -53,9 +53,13 @@ let currrentItem = 0;
 
 // load intial item
 window.addEventListener('DOMContentLoaded', () => {
-  const item = reviews[currrentItem];
+  showPerson(currrentItem);
+});
+
+function showPerson(person) {
+  const item = reviews[person];
   img.src = item.img;
   author.innerText = item.name;
   job.textContent = item.job;
   info.textContent = item.text;
-});
+}
